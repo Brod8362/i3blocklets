@@ -1,0 +1,9 @@
+#!/bin/bash
+declare -A cmds=(
+  ["[WiFi] Enable"]='nmcli r wifi on'
+  ["[WiFi] Disable"]='nmcli r wifi off'
+  ["[Cellular] Enable"]='nmcli r wwan on'
+  ["[Cellular] Disable"]='nmcli r wwan off'
+)
+chosen=$(printf %s\\n "${!cmds[@]}" | sort | dmenu) || exit
+eval exec "${cmds["$chosen"]}"
