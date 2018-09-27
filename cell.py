@@ -36,7 +36,7 @@ if sim == "none": #for when sim not be
     cellular = {'name':'cellular', 'color':'#FFFFFF', 'markup':'none', 'full_text':'No SIM'}
     json.dump(cellular, sys.stdout)
     sys.exit()
-if signal == 0 and state == "disconnected": #for when signal not be 
+if signal == 0: #for when signal not be 
     cellular = {'name':'cellular', 'color':'#FF0000', 'markup':'none', 'full_text':'No Service'}
     json.dump(cellular, sys.stdout)
     sys.exit()

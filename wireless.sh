@@ -18,7 +18,7 @@ INTERFACE="wlp3s0"
 QUALITY=$(grep $INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
 CONNECTED=$(cat /sys/class/net/$INTERFACE/carrier)
 STATUS=$(nmcli r wifi)
-
+NETWORK=$(iwgetid -r)
 #------------------------------------------------------------------------
 #full, short
 
@@ -49,6 +49,6 @@ if [ -z $QUALITY ]; then
     exit
 fi
 
-echo WLAN $QUALITY%
-echo $QUALITY%
+echo WLAN $NETWORK $QUALITY%
+echo $NETWORK $QUALITY%
 echo "#00FF00"
