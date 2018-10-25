@@ -12,7 +12,7 @@ Feel free to fork and use or modify  them for yourself.
 Bluetooth script - https://github.com/Anachron/i3blocks/blob/master/blocks/bluetooth
 
 
-Battery/Bandwidth/Temperature/WiFi - https://github.com/vivien/i3blocks-contrib
+Battery/Bandwidth/Temperature/WiFi/Media Player - https://github.com/vivien/i3blocks-contrib
 
 
 Scripts
@@ -39,3 +39,4 @@ wifi_dmenu - A dmenu thing I've made which allows turning cellular/wifi connecti
 wireless.sh - A script which shows Wifi network name and signal strength. (Left click to enable, right click to disable, middle click for status.)
 
 
+mediaplayer - Unmodified version of the default script.
