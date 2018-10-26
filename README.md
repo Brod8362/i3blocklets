@@ -39,4 +39,4 @@ wifi_dmenu - A dmenu thing I've made which allows turning cellular/wifi connecti
 wireless.sh - A script which shows Wifi network name and signal strength. (Left click to enable, right click to disable, middle click for status.)
 
 
-mediaplayer - Unmodified version of the default script.
+mediaplayer - Modified version of the default mediaplayer script, with better MPD support.
