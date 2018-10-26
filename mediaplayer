@@ -128,7 +128,10 @@ sub mpd {
     }
     if (`mpc` =~ qr(paused)) {
 	$time = "paused";
-   }
+    }
+    if ($time eq 'me:n/ar') {
+	$time = "no track";
+    }
     my $data = qx(mpc current);
     chomp $data;
     my $data2 = "$data [$time]";
