@@ -109,9 +109,8 @@ sub cmus {
 
 sub mpd {
     my $time = "";
-    if (`mpc` =~ qr(..:../.....)) {
+    if (`mpc` =~ qr(\d+:\d\d/\d+:\d\d)) {
         $time = $&; 
-	$time =~ tr/ //d; #remove the spaces before and after
     }
     my @args = ();
     if (`mpc` =~ qr(repeat: on)) {
