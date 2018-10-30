@@ -117,15 +117,16 @@ sub mpd {
     if ($mpc_output =~ qr(repeat: on)) {
 	push @args, "R";
     }
+    if ($mpc_output =~ qr(random: on)) {
+    	push @args, "Z";
+    }
     if ($mpc_output =~ qr(single: on)) {
 	push @args, "S";
     }
     if ($mpc_output =~ qr(consume: on)) {
 	push @args, "C";
     }
-    if ($mpc_output =~ qr(random: on)) {
-    	push @args, "Z";
-    }
+
     if ($mpc_output =~ qr(paused)) {
 	$time = "paused";
     }
