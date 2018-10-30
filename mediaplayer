@@ -109,23 +109,24 @@ sub cmus {
 
 sub mpd {
     my $time = "";
-    if (`mpc` =~ qr(\d+:\d\d/\d+:\d\d)) {
+    my $mpc_output = `mpc`;
+    if ($mpc_output =~ qr(\d+:\d\d/\d+:\d\d)) {
         $time = $&; 
     }
     my @args = ();
-    if (`mpc` =~ qr(repeat: on)) {
+    if ($mpc_output =~ qr(repeat: on)) {
 	push @args, "R";
     }
-    if (`mpc` =~ qr(single: on)) {
+    if ($mpc_output =~ qr(single: on)) {
 	push @args, "S";
     }
-    if (`mpc` =~ qr(consume: on)) {
+    if ($mpc_output =~ qr(consume: on)) {
 	push @args, "C";
     }
-    if (`mpc` =~ qr(random: on)) {
+    if ($mpc_output =~ qr(random: on)) {
     	push @args, "Z";
     }
-    if (`mpc` =~ qr(paused)) {
+    if ($mpc_output =~ qr(paused)) {
 	$time = "paused";
     }
     if ($time eq 'me:n/ar') {
